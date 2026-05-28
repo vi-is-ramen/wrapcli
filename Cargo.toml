@@ -1,0 +1,22 @@
+[package]
+name = "@project@"
+version = "0.1.0"
+edition = "2021"
+license = "@license@"
+authors = ["@author@ <@email@>"]
+description = "@description@"
+repository = "@repo@"
+readme = "README.md"
+documentation = "https://docs.rs/@project@"
+keywords = ["library", "utility"]
+categories = ["development-tools"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+
+[dev-dependencies]
+
+[build-dependencies]

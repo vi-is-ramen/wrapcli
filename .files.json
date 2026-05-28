@@ -1,0 +1,28 @@
+{
+    "ignore_patterns": [
+        "target",
+        "debug",
+        "**/*.rs.bk",
+        "*.pdb",
+        "**/*.pdb",
+        "*.ppdb",
+        "**/*.ppdb",
+        "**/mutants.out*/",
+        "rustc-ice-*.txt",
+        "cargo.lock",
+        "Cargo.lock"
+    ],
+    "dont_ignore": [
+        ".files.json",
+        ".gitignore",
+        ".cargo",
+        ".github",
+        ".cargo/*",
+        ".github/*",
+        ".cargo/**",
+        ".github/**",
+        ".cargo/**/*",
+        ".github/**/*",
+        ".README.md"
+    ]
+}
