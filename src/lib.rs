@@ -1,4 +1,4 @@
-#![doc = include_str!("../mdocs/index.md")]
+#![doc = include_str!("../mdocs/docs.md")]
 use std::io::{self, BufRead, BufReader, Write};
 use std::process::{Child, Command, ExitStatus, Stdio};
 use std::thread;
