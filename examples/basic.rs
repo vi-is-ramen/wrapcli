@@ -1,7 +1,11 @@
+//! Example: `cargo run --example basic -- -V`
+//!
+//! Runs `rustc -V` through wrapcli and shows how changes
+//! first output string.
+
 use wrapcli::{run_streaming, WrapConfig};
 
-#[test]
-fn common() -> std::io::Result<()> {
+fn main() -> std::io::Result<()> {
     let cfg = WrapConfig {
         orig_name: "rustc".into(),
         fake_name: "dustc".into(),

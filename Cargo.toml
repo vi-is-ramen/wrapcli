@@ -1,13 +1,13 @@
 [package]
-name = "@project@"
+name = "wrapcli"
 version = "0.1.0"
 edition = "2021"
-license = "@license@"
-authors = ["@author@ <@email@>"]
-description = "@description@"
-repository = "@repo@"
+license = "MIT OR Apache-2.0"
+authors = ["Ivan Chetchasov <vi.is.chapmann@gmail.com>"]
+description = "CLI identity faking utility."
+repository = "https://github.com/vi-is-ramen/wrapcli"
 readme = "README.md"
-documentation = "https://docs.rs/@project@"
+documentation = "https://docs.rs/wrapcli"
 keywords = ["library", "utility"]
 categories = ["development-tools"]
 
@@ -16,6 +16,7 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
+regex = "1.12.3"
 
 [dev-dependencies]
 

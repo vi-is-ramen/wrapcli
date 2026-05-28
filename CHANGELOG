@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Initial release of `@project@`
+- Initial release of `wrapcli`
 - Basic `greet` function
 - Documentation and examples
 
@@ -38,7 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [0.1.0] - @date@
+## [0.1.0] - 2026-05-28
 
 ### Added
 - First published version
@@ -46,5 +46,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Unit and integration tests
 - CI pipeline
 
-[Unreleased]: https://github.com/@author@/@project@/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/@author@/@project@/releases/tag/v0.1.0
+[Unreleased]: https://github.com/Ivan Chetchasov/wrapcli/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/Ivan Chetchasov/wrapcli/releases/tag/v0.1.0

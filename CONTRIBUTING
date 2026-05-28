@@ -1,6 +1,6 @@
-# Contributing to @project@
+# Contributing to wrapcli
 
-First off, thank you for considering contributing to @project@. It's people like you that make this project better.
+First off, thank you for considering contributing to wrapcli. It's people like you that make this project better.
 
 Following these guidelines helps communicate that you respect the maintainers' time and makes the contribution process smooth for everyone.
 
@@ -22,13 +22,13 @@ Following these guidelines helps communicate that you respect the maintainers' t
 
 ## Code of Conduct
 
-This project adheres to the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). By participating, you are expected to uphold this code. Please report unacceptable behavior to @email@.
+This project adheres to the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). By participating, you are expected to uphold this code. Please report unacceptable behavior to vi.is.chapmann@gmail.com.
 
 ---
 
 ## How to Report a Problem
 
-**If you find a security vulnerability, do NOT open an issue.** Email @email@ instead. See more: [SECURITY](SECURITY)
+**If you find a security vulnerability, do NOT open an issue.** Email vi.is.chapmann@gmail.com instead. See more: [SECURITY](SECURITY)
 
 For any other bug:
 1. **Search existing issues / work items** – your problem may already be fixed or reported.
@@ -62,8 +62,8 @@ Feel free to ask questions on the issue – we're happy to guide you.
 ### Building the Project
 ```bash
 # Clone your fork
-git clone @repo@
-cd @project@
+git clone https://github.com/vi-is-ramen/wrapcli
+cd wrapcli
 
 cargo build
 ```

@@ -1,23 +1,42 @@
-# CAUTION
+# wrapcli
 
-This is a template! Don't forget to:
+[![Crates.io](https://img.shields.io/crates/v/wrapcli.svg)](https://crates.io/crates/wrapcli)
+[![Docs.rs](https://docs.rs/wrapcli/badge.svg)](https://docs.rs/wrapcli)
+[![CI](https://github.com/@author@/wrapcli/workflows/CI/badge.svg)](https://github.com/@author@/wrapcli/actions)
 
-Edit this files:
-- [`expand.cfg`](expand.cfg)
+CLI identity faking utility.
 
-Run this command:
+## Usage
+
+Add this to your project's dependencies:
 
 ```shell
-bash expand.sh
+cargo add wrapcli
 ```
 
-Create this files:
-- `LICENSE`
+Then use it in your code:
 
-Remove this files:
-- [`expand.sh`](expand.sh)
-- [`expand.cfg`](expand.cfg)
-- [`README.md`](README.md)
+```rust
+use wrapcli::{run_streaming, WrapConfig};
 
-Rename this files:
-- [`.README.md`](.README.md) -> `README.md`
+fn main() -> std::io::Result<()> {
+    let cfg = WrapConfig {
+        orig_name: "rustc".into(),
+        fake_name: "dustc".into(),
+        fake_ver: "2.0.0".into(),
+        save_orig: true,
+    };
+
+    let args: Vec<String> = std::env::args().skip(1).collect();
+    let status = run_streaming(&cfg, args)?;
+    std::process::exit(status.code().unwrap_or(1));
+}
+```
+
+## Documentation
+
+Full documentation is available on [docs.rs](https://docs.rs/wrapcli).
+
+## License
+
+Licensed under MIT.
