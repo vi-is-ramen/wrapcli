@@ -1,0 +1,17 @@
+[book]
+authors = ["Ivan Chetchasov"]
+language = "en"
+src = "src"
+title = "WrapCLI Book"
+
+[output.html]
+git-repository-url = "https://github.com/vi-is-ramen/wrapcli"
+edit-url-template = "https://github.com/vi-is-ramen/wrapcli/edit/main/book/{path}"
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.html.playpen]
+editable = true
+copyable = true

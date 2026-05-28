@@ -1,20 +1,20 @@
 # wrapcli
 
+Wrap a CLI tool and rewrite its output to masquerade as another tool.
+
 [![Crates.io](https://img.shields.io/crates/v/wrapcli.svg)](https://crates.io/crates/wrapcli)
 [![Docs.rs](https://docs.rs/wrapcli/badge.svg)](https://docs.rs/wrapcli)
-[![CI](https://github.com/@author@/wrapcli/workflows/CI/badge.svg)](https://github.com/@author@/wrapcli/actions)
+[![CI](https://github.com/vi-is-ramen/wrapcli/actions/workflows/ci.yml/badge.svg)](https://github.com/vi-is-ramen/wrapcli/actions/workflows/ci.yml)
 
-CLI identity faking utility.
+## Quick start
 
-## Usage
-
-Add this to your project's dependencies:
+Add to your project:
 
 ```shell
 cargo add wrapcli
 ```
 
-Then use it in your code:
+Then use it:
 
 ```rust
 use wrapcli::{run_streaming, WrapConfig};
@@ -35,8 +35,12 @@ fn main() -> std::io::Result<()> {
 
 ## Documentation
 
-Full documentation is available on [docs.rs](https://docs.rs/wrapcli).
+Full documentation is available in the [WrapCLI Book](https://vi-is-ramen.github.io/wrapcli).
 
 ## License
 
-Licensed under MIT.
+MIT OR Apache-2.0
+
+---
+
+*Made with ❤️ for the Rust community*

@@ -10,7 +10,8 @@
         "**/mutants.out*/",
         "rustc-ice-*.txt",
         "cargo.lock",
-        "Cargo.lock"
+        "Cargo.lock",
+        "wrapcli-book/book"
     ],
     "dont_ignore": [
         ".files.json",

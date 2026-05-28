@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          profile: minimal
+
+      - name: Install just
+        run: cargo install just
+
+      - name: Install git-cliff
+        run: cargo install git-cliff
+
+      - name: Install cargo-edit
+        run: cargo install cargo-edit
+
+      - name: Set crate version from git tag
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          cargo set-version "$TAG_VERSION"
+        shell: bash
+
+      - name: Generate CHANGELOG
+        run: just changelog
+
+      - name: Run pre-release checks
+        run: just pre-release
+
+      - name: Publish to crates.io
+        run: just publish
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+
+      - name: Build mdBook
+        run: just build-book
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: book/book
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: CHANGELOG.md
+          draft: false
+          prerelease: false
+          generate_release_notes: false
+          files: |
+            target/package/wrapcli-*.crate
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

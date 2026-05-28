@@ -1,31 +1,25 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: "[BUG] "
+name: Bug Report
+about: Report a problem or unexpected behavior
+title: '[BUG] '
 labels: bug
 assignees: ''
-
 ---
 
-## Describe the bug
-A clear and concise description of what the bug is.
+## Description
+A clear and concise description of the bug.
 
-## To Reproduce
-Steps to reproduce the behavior:
-1. ...
-2. ...
-3. ...
+## Steps to Reproduce
+1. Run command: `...`
+2. See error: `...`
 
-## Expected behavior
-A clear and concise description of what you expected to happen.
-
-## Screenshots / logs
-If applicable, add screenshots or relevant log output.
+## Expected Behavior
+What you expected to happen instead.
 
 ## Environment
-- OS: [e.g. Ubuntu 24.04, Windows 11]
+- OS: [e.g. Ubuntu 24.04, macOS 15, Windows 11]
 - Rust version: `rustc --version`
-- @project@ version: [e.g. 0.1.0]
+- wrapcli version: from Cargo.toml or `cargo tree | grep wrapcli`
 
-## Additional context
-Add any other context about the problem here.
+## Additional Context
+Add any other context, logs, or screenshots here.

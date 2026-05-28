@@ -1,22 +1,31 @@
-#![doc = include_str!("../mdocs/docs.md")]
+//! For docs look at [WrapCLI Book](https://vi-is-ramen.github.io/wrapcli/)
+
 use std::io::{self, BufRead, BufReader, Write};
 use std::process::{Child, Command, ExitStatus, Stdio};
 use std::thread;
-
 use regex::Regex;
 
+/// Wrapper configuration.
 #[derive(Debug, Clone)]
 pub struct WrapConfig {
+    /// Original binary/program name to determine what replace to.
     pub orig_name: String,
+    /// Fake name of program.
     pub fake_name: String,
+    /// Fake version of program.
     pub fake_ver: String,
+    /// Save original program's version in parens or not?
     pub save_orig: bool,
 }
 
+/// Result of running a command with wrapper.
 #[derive(Debug)]
 pub struct WrapResult {
+    /// Exit status of called binary.
     pub status: ExitStatus,
+    /// Stdout stream of called binary.
     pub stdout: Vec<u8>,
+    /// Stderr stream of called binary.
     pub stderr: Vec<u8>,
 }
 
@@ -89,6 +98,7 @@ impl Rewriter {
     }
 }
 
+/// Run wrap configuration with given CLI arguments.
 pub fn run_streaming<S: AsRef<str>>(
     cfg: &WrapConfig,
     args: impl IntoIterator<Item = S>,
@@ -121,6 +131,7 @@ pub fn run_streaming<S: AsRef<str>>(
     Ok(status)
 }
 
+/// Run wrap configuration with given CLI arguments and capture child process' stdout/err.
 pub fn run_capture<S: AsRef<str>>(
     cfg: &WrapConfig,
     args: impl IntoIterator<Item = S>,

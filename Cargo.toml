@@ -1,23 +1,31 @@
 [package]
 name = "wrapcli"
-version = "0.1.2"
+version = "0.0.0"
 edition = "2021"
-license = "MIT OR Apache-2.0"
 authors = ["Ivan Chetchasov <vi.is.chapmann@gmail.com>"]
-description = "CLI identity faking utility."
+description = "Wrap and rewrite CLI output to masquerade as another tool"
+license = "MIT OR Apache-2.0"
 repository = "https://github.com/vi-is-ramen/wrapcli"
+homepage = "https://vi-is-ramen.github.io/wrapcli"
+documentation = "https://vi-is-ramen.github.io/wrapcli"
 readme = "README.md"
-documentation = "https://docs.rs/wrapcli"
-keywords = ["library", "utility"]
-categories = ["development-tools"]
+keywords = ["cli", "wrapper", "rewrite", "mask", "alias"]
+categories = ["command-line-interface", "development-tools"]
+
+[dependencies]
+just-lsp = "0.4.5"
+regex = "1.10"
+
+[dev-dependencies]
+
+[lib]
+name = "wrapcli"
+path = "src/lib.rs"
+
+[[example]]
+name = "basic"
+path = "examples/basic.rs"
 
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
-
-[dependencies]
-regex = "1.12.3"
-
-[dev-dependencies]
-
-[build-dependencies]

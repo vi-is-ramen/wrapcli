@@ -1,27 +1,22 @@
 ## Description
+Provide a summary of the changes and the related issue.
 
-Please include a summary of the change and which issue is fixed. 
-Fixes #(issue number)
+Fixes #(issue)
 
-## Type of change
-
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+## Type of Change
+- [ ] Bug fix (non-breaking)
+- [ ] New feature (non-breaking)
+- [ ] Breaking change (fix or feature that breaks existing API)
 - [ ] Documentation update
-- [ ] Refactoring (no functional changes)
 
 ## Checklist
+- [ ] I've read the project's contributing guidelines
+- [ ] My code follows the project's style guidelines
+- [ ] I've added tests that prove my fix/feature works
+- [ ] All existing and new tests pass locally
+- [ ] I've updated documentation as needed
+- [ ] I've updated the CHANGELOG (if user-facing changes)
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation (README, docs)
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published
+## Screenshots (if applicable)
 
-## Additional notes
-
-Add any further context or screenshots about the pull request here.
+## Additional Notes
