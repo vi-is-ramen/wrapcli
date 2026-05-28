@@ -1,9 +1,9 @@
 //! For docs look at [WrapCLI Book](https://vi-is-ramen.github.io/wrapcli/)
 
+use regex::Regex;
 use std::io::{self, BufRead, BufReader, Write};
 use std::process::{Child, Command, ExitStatus, Stdio};
 use std::thread;
-use regex::Regex;
 
 /// Wrapper configuration.
 #[derive(Debug, Clone)]
