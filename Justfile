@@ -11,9 +11,6 @@ build-release:
 test:
     cargo test --lib
 
-test-all:
-    cargo test --all
-
 # Linting & Formatting
 
 lint:
@@ -48,14 +45,14 @@ changelog: install-git-cliff
 
 # Release workflow (called by CI)
 
-pre-release: test-all lint build-release build-book
+pre-release: test lint build-release build-book
 
 publish:
     cargo publish --no-verify --allow-dirty
 
 # CI Simulation (local pre-flight checks)
 
-ci: test-all lint build-release build-book dry-publish
+ci: test lint build-release build-book dry-publish
 
 dry-publish:
     cargo publish --dry-run --allow-dirty
